@@ -1,0 +1,30 @@
+{
+  "name": "esm-module-alias",
+  "version": "2.0.0",
+  "description": "An alternative to module-alias, but for esm",
+  "exports": {
+    ".": "./index.js",
+    "./loader": "./loader.mjs"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euberdeveloper/esm-module-alias.git"
+  },
+  "keywords": [
+    "esm-module-alias",
+    "module-alias",
+    "esm",
+    "alias"
+  ],
+  "author": "Eugenio Vinicio Berretta <euberdeveloper@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/euberdeveloper/esm-module-alias/issues"
+  },
+  "homepage": "https://github.com/euberdeveloper/esm-module-alias#readme"
+}
