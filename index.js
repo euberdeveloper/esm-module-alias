@@ -5,10 +5,12 @@ export default function generateAliasesResolver(aliasesToAdd) {
 
     const base = process.cwd();
 
+    const windowsSupportString = process.platform === 'win32' ? 'file://' : ''
+
     const absoluteAliases = Object.keys(aliasesToAdd).reduce((acc, key) =>
       aliasesToAdd[key][0] === '/'
         ? acc
-        : { ...acc, [key]: path.join(base, aliasesToAdd[key]) },
+        : { ...acc, [key]: path.join(windowsSupportString, base, aliasesToAdd[key]) },
       aliasesToAdd)
 
     return absoluteAliases;
