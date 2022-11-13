@@ -1,3 +1,9 @@
 {
-    "modulePathIgnorePatterns": ["__tests__/sample-projects"]
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+        "jest-expect-message"
+    ],
+    "modulePathIgnorePatterns": [
+        "__tests__/sample-projects"
+    ]
 }

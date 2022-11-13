@@ -4,9 +4,8 @@
   "description": "A test project for the npm module esm-module-alias",
   "type": "module",
   "exports": "./index.js",
-  "test": "node --loader ../loader.mjs index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --loader ../../../loader.mjs index.js"
   },
   "engines": {
     "node": ">=14.16"
