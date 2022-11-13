@@ -4,13 +4,13 @@ export default function generateAliasesResolver(aliasesToAdd) {
   const getAliases = () => {
 
     const base = process.cwd();
-    const windowsSupportString = process.platform === 'win32' ? 'file://' : ''
+    const windowsSupportString = process.platform === 'win32' ? 'file://' : '';
 
     const absoluteAliases = Object.keys(aliasesToAdd).reduce((acc, key) =>
       aliasesToAdd[key][0] === '/'
         ? acc
         : { ...acc, [key]: path.join(windowsSupportString, base, aliasesToAdd[key]) },
-      aliasesToAdd)
+      aliasesToAdd);
 
     return absoluteAliases;
 
@@ -18,8 +18,8 @@ export default function generateAliasesResolver(aliasesToAdd) {
 
   const isAliasInSpecifier = (path, alias) => {
     return path.indexOf(alias) === 0
-      && (path.length === alias.length || path[alias.length] === '/')
-  }
+      && (path.length === alias.length || path[alias.length] === '/');
+  };
 
   const aliases = getAliases();
 
@@ -32,6 +32,6 @@ export default function generateAliasesResolver(aliasesToAdd) {
       : path.join(aliases[alias], specifier.substr(alias.length));
 
     return defaultResolve(newSpecifier, parentModuleURL);
-  }
+  };
 }
 
