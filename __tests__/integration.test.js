@@ -16,9 +16,9 @@ describe('Integration tests', function () {
             });
 
             const errorMessage = customErrorMessageTemplate
-                .replaceAll('{{CODE}}', code)
-                .replaceAll('{{STDOUT}}', stdout)
-                .replaceAll('{{STDERR}}', stderr);
+                .replace(/{{CODE}}/g, code)
+                .replace(/{{STDOUT}}/g, stdout)
+                .replace(/{{STDERR}}/g, stderr);
 
             expect(code, errorMessage).toEqual(0);
         });
