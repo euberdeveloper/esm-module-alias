@@ -10,8 +10,7 @@
   "types": "index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "jest",
-    "cover": "jest --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

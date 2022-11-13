@@ -5,6 +5,5 @@
     ],
     "modulePathIgnorePatterns": [
         "__tests__/sample-projects"
-    ],
-    "coverageProvider": "v8"
+    ]
 }
