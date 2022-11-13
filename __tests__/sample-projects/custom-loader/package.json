@@ -5,14 +5,11 @@
   "type": "module",
   "exports": "./index.js",
   "scripts": {
-    "test": "node --loader ../../../loader.mjs index.js"
+    "test": "node --loader ./my-loader.mjs index.js"
   },
   "engines": {
     "node": ">=14.16"
   },
   "author": "Euber Developer <euberdeveloper@gmail.com>",
-  "license": "ISC",
-  "aliases": {
-    "@deep": "very/deep/module"
-  }
+  "license": "ISC"
 }
