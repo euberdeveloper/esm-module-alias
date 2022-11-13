@@ -69,3 +69,6 @@ Once you submit your PR, a Docs team member will review your proposal. We may as
 
 Congratulations :tada::tada: You have successfully made a contribution to the docs! :sparkles:
 
+## Contacts
+
+If you have any questions, you can contact the maintainer at the email [euberdeveloper@gmail.com](mailto:euberdeveloper@gmail.com).
