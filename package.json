@@ -10,7 +10,7 @@
   "types": "index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest __tests__"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/euberdeveloper/esm-module-alias/issues"
   },
-  "homepage": "https://github.com/euberdeveloper/esm-module-alias#readme"
+  "homepage": "https://github.com/euberdeveloper/esm-module-alias#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }

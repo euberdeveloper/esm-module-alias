@@ -1,0 +1,19 @@
+{
+  "name": "esm-module-alias-test-1",
+  "version": "1.0.0",
+  "description": "A test project for the npm module esm-module-alias",
+  "type": "module",
+  "exports": "./index.js",
+  "test": "node --loader ../loader.mjs index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "author": "Euber Developer <euberdeveloper@gmail.com>",
+  "license": "ISC",
+  "aliases": {
+    "@deep": "very/deep/module"
+  }
+}
