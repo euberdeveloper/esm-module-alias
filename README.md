@@ -92,6 +92,10 @@ To do so:
     ```bash
     node --loader=./my-loader.mjs --no-warnings myscript.js # Note that --no-warnings is to disable a warning and is optional
     ```
+    
+## Tests
+
+Tests are run with **[Jest](https://jestjs.io/)** and work by executing `npm test` with **[shelljs](https://https://www.npmjs.com/package/shelljs)** on a bunch of sample projects,
 
 ## Note
 
