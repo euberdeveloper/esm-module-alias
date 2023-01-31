@@ -68,7 +68,7 @@ To use this module:
   ```
 * When you execute your script, **add this module as a loader** by adding `--loader esm-module-alias/loader`, for example:
     ```bash
-    node --loader=./scripts/alias-loader.mjs --no-warnings myscript.js # Note that --no-warnings is to disable a warning and is optional
+    node --loader esm-module-alias/loader --no-warnings myscript.js # Note that --no-warnings is to disable a warning and is optional
     ```
 
 ## An option if you want to create a custom loader
