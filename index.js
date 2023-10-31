@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-export default function generateAliasesResolver(aliasesToAdd, customMatcher) {
+export default function generateAliasesResolver(aliasesToAdd, options) {
   const getAliases = () => {
 
     const base = process.cwd();
@@ -16,7 +16,7 @@ export default function generateAliasesResolver(aliasesToAdd, customMatcher) {
 
   }
 
-  const isAliasInSpecifier = customMatcher ?? ((path, alias) => {
+  const isAliasInSpecifier = options?.matcher ?? ((path, alias) => {
     return path.indexOf(alias) === 0
       && (path.length === alias.length || path[alias.length] === '/');
   });
