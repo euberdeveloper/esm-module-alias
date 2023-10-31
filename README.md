@@ -93,6 +93,31 @@ To do so:
     node --loader=./my-loader.mjs --no-warnings myscript.js # Note that --no-warnings is to disable a warning and is optional
     ```
     
+## What if you want to change the matching behaviour?
+
+You can also have a custom matcher, a function that customize the behaviour of a path matching an alias.
+
+To do so:
+
+* Create a custom file named as you want, for instance `my-loader.mjs`:
+  ```js
+  import generateAliasesResolver from 'esm-module-alias'; 
+  const aliases = {
+    "@root": ".",
+    "@deep": "src/some/very/deep/directory/or/file",
+    "@my_module": "lib/some-file.js",
+    "something": "src/foo"
+  };
+  const matcher = (path, alias) => {
+    return (path.indexOf(alias) === 0); // Your customized code
+  }; 
+  export const resolve = generateAliasesResolver(aliases, { matcher }); // The custom matcher is passed to the options
+  ```
+* When you execute your script, **add that script as a loader** by adding `--loader ./my-loader.mjs`, for example:
+    ```bash
+    node --loader=./my-loader.mjs --no-warnings myscript.js # Note that --no-warnings is to disable a warning and is optional
+    ```
+
 ## Tests
 
 Tests are run with **[Jest](https://jestjs.io/)** and work by executing `npm test` with **[shelljs](https://https://www.npmjs.com/package/shelljs)** on a bunch of sample projects,
