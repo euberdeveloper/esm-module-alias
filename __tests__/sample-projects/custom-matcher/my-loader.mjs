@@ -8,4 +8,6 @@ const matcher = (path, alias) => {
       (path.length === alias.length || path[alias.length] === "/"  || path[alias.length - 1] === "/")
     )
 }; 
-export const resolve = generateAliasesResolver(aliases, matcher);
+export const resolve = generateAliasesResolver(aliases, {
+  matcher
+});
