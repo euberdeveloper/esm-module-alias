@@ -9,6 +9,15 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "module",
+  "files": [
+    "package.json",
+    "index.js",
+    "index.d.ts",
+    "loader.mjs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "jest",
     "release": "dotenv release-it"
