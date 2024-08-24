@@ -1,5 +1,7 @@
 
 
+## [2.2.1](https://github.com/euberdeveloper/esm-module-alias/compare/v2.2.0...v2.2.1) (2024-08-24)
+
 # 2.2.0 (2024-06-13)
 
 
